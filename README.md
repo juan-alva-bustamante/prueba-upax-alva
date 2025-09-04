@@ -37,6 +37,13 @@ cd tu-repo
 npm install
 ```
 
+## 🌐 Live Demo
+
+La aplicación está desplegada en Netlify:
+
+👉 [https://astounding-youtiao-47b66a.netlify.app](https://astounding-youtiao-47b66a.netlify.app)
+
+
 ---
 
 # Desarrollo
