@@ -1,0 +1,48 @@
+@use "../../styles/mixins" as *;
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  button {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+
+    &:hover:not(:disabled) {
+      background-color: #e0e0e0;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  }
+
+  span {
+    font-size: 0.95rem;
+    color: #555;
+  }
+
+  .select {
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 0.95rem;
+    font-family: inherit;
+  }
+
+  @include respond-to(sm) {
+    justify-content: flex-start;
+  }
+}

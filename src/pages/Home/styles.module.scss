@@ -1,0 +1,80 @@
+@use "../../styles/mixins" as *;
+
+.container {
+  // overflow: hidden;
+  background-color: #d6dcdd;
+  height: 100vh;
+  overflow: auto;
+
+  .bodyContainer {
+    margin: 2rem 2rem 0 2rem;
+  }
+}
+
+.title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2.5rem;
+}
+
+.wrapper {
+  width: 100%;
+  margin-bottom: 1.5rem;
+
+  @include respond-to(sm) {
+    max-width: 400px;
+  }
+}
+
+.input {
+  width: 90%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: #fff;
+  color: #333;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  background-color: #f0f0f0;
+
+  &::placeholder {
+    color: #aaa;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #666;
+    box-shadow: 0 0 0 2px rgba(100, 100, 100, 0.1);
+  }
+
+  @include respond-to(sm) {
+    width: 100%;
+  }
+}
+
+.shimmerContainer {
+  height: 15rem;
+  width: 100%;
+}
+
+.content {
+  h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    color: #444;
+
+    strong {
+      font-weight: 600;
+    }
+  }
+}

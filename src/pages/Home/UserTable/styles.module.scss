@@ -1,0 +1,95 @@
+@use "../../../styles/mixins" as *;
+
+.tableWrapper {
+  padding: 1rem;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+
+  // 🧾 Oculta encabezado en mobile
+  thead {
+    display: none;
+    height: 2.5rem;
+    text-align: left;
+
+    @include respond-to(sm) {
+      display: table-header-group;
+      background-color: #f4f4f4;
+
+      th {
+        font-weight: 600;
+        color: #333;
+        font-size: 0.95rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      display: block;
+      margin-bottom: 1rem;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 0.75rem;
+
+      ::hover {
+        background-color: #f9f9f9;
+        cursor: pointer;
+      }
+
+      @include respond-to(sm) {
+        display: table-row;
+        border: none;
+        padding: 0;
+      }
+
+      td {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        font-size: 0.9rem;
+        color: #444;
+
+        &::before {
+          content: attr(data-label);
+          font-weight: 600;
+          color: #777;
+        }
+
+        @include respond-to(sm) {
+          display: table-cell;
+          padding: 1rem;
+          &::before {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.row {
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #f3f3f3;
+  }
+
+  &:active {
+    background-color: #eaeaea;
+  }
+}

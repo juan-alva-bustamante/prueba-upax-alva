@@ -1,0 +1,20 @@
+html:root {
+  --color-primary: #809bce;
+  --color-secondary: "";
+  --color-success: "";
+  --color-error: "#FF004F";
+  --color-warning: "";
+  --color-info: "";
+
+  --sidedrawer-body-height: "51px";
+  --sidedrawer-foot-height: "72px";
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  background-color: #f5f5f5;
+}
